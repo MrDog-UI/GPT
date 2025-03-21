@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "ChatGPT Screenshot Sidebar",
+  "name": "ChatGPT Sidebar Screenshot Extension",
   "version": "1.0",
-  "description": "Take a screenshot, extract text, and chat with ChatGPT directly in a sidebar.",
+  "description": "Take a screenshot and interact with ChatGPT directly in a sidebar.",
   "permissions": ["activeTab", "scripting", "storage", "tabs"],
   "host_permissions": ["<all_urls>"],
   "background": {
@@ -10,11 +10,11 @@
   },
   "sidebar_action": {
     "default_page": "sidebar/sidebar.html",
-    "default_icon": "VL Turbo.jpg"
+    "default_icon": "icons/icon48.png"
   },
   "icons": {
     "16": "icons/icon16.png",
-    "48": "VL Turbo.jpg",
+    "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   }
 }
