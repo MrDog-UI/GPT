@@ -1,11 +1,12 @@
 document.getElementById("capture-text").addEventListener("click", () => {
-  // Request the background service worker to take a screenshot
-  chrome.runtime.sendMessage({ type: "takeScreenshot" });
+  chrome.runtime.sendMessage({ type: "captureScreenshot" });
 });
 
-// Listen for the OCR-extracted text from the background script
+// Listen for the screenshot data from the background script
 chrome.runtime.onMessage.addListener((message) => {
-  if (message.type === "displayText") {
-    document.getElementById("extracted-text").innerText = message.text;
+  if (message.type === "screenshotTaken") {
+    const textArea = document.getElementById("captured-text");
+    textArea.value = `Screenshot captured: ${message.screenshotUrl}`;
+    textArea.focus();  // Allows users to easily edit or input additional text
   }
 });
