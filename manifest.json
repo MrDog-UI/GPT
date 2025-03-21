@@ -10,7 +10,6 @@
   },
   "sidebar_action": {
     "default_page": "sidebar/sidebar.html",
-    "default_icon": "VL Turbo.jpg"
   },
   "icons": {
     "16": "VL Turbo.jpg",
